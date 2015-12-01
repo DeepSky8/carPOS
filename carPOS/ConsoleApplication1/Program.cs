@@ -19,19 +19,31 @@ namespace ConsoleApplication1
 
         //This program needs to make available the car characteristics, the price for which it was purchased, and the date it was purchased
         public class Car {
-            public Color color; 
-            public BodyStyle bodyStyle; 
-            public TransmissionType transmissionType; 
-            public CarMaker carMaker; 
-            public DateTime yearMade;
-            
+
+            private Color color;
+            private BodyStyle bodyStyle;
+            private TransmissionType transmissionType;
+            private CarMaker carMaker;
+            private DateTime yearMade;
+
+            public Car(Color bodyColor, BodyStyle bodyType, TransmissionType transmissionKind, CarMaker carCompany, DateTime yearCreated)
+            {
+                color = bodyColor;
+                bodyStyle = bodyType;
+                transmissionType = transmissionKind;
+                carMaker = carCompany;
+                yearMade = yearCreated;
+
+            }
+
+
             public void printCar()
             {
-                Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", color, bodyStyle, transmissionType, carMaker, yearMade );
-            } 
+                Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", color, bodyStyle, transmissionType, carMaker, yearMade);
+            }
 
 
-}
+        }
 
 
 
